@@ -1,4 +1,4 @@
-package webvitals_reporter
+package webvitals_exporter
 
 import (
 	"encoding/json"

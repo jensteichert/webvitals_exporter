@@ -1,4 +1,4 @@
-module github.com/jensteichert/webvitals-reporter
+module github.com/jensteichert/webvitals-exporter
 
 go 1.15
 

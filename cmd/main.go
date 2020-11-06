@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/jensteichert/webvitals-reporter"
+	"github.com/jensteichert/webvitals-exporter"
 )
 
 func main() {
-	webvitals_reporter.StartServer(":2113");
+	webvitals_exporter.StartServer(":2113");
 }
