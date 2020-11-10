@@ -1,1 +1,0 @@
-docker run -d --name prometheus -p 9090:9090 -v /Users/jensteichert/Documents/code/prometheus_fakeexporter/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus --config.file=/etc/prometheus/prometheus.yml
