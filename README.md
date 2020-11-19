@@ -1,5 +1,9 @@
 # webvitals_exporter
+![Build](https://github.com/jensteichert/webvitals_exporter/workflows/Build/badge.svg)
+![CodeQL](https://github.com/jensteichert/webvitals_exporter/workflows/CodeQL/badge.svg)
+
 Report Web Vitals from Next.js to Prometheus
+
 
 
 ## Report Web Vitals
