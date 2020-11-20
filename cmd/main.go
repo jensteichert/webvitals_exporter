@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/jensteichert/webvitals-exporter"
+	"github.com/jensteichert/webvitals_exporter"
 )
 
 func main() {

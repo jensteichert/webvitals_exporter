@@ -16,5 +16,8 @@ services:
       - "3000:3000"
     volumes:
       - ./datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
+      - ./dashboard.yml:/etc/grafana/provisioning/dashboards/dashboard.yml
+      - ../webvitals_dashboard.json:/etc/grafana/dashboards/webvitals_dashboard.json
+
     links:
       - prometheus

@@ -56,6 +56,7 @@ func HandleWebVital(write http.ResponseWriter, req *http.Request) {
 		vital = Vitals.CLS
 	}
 
+
 	if vital != nil {
 		vital.WithLabelValues("myapp").Observe(payload.Value)
 	}
