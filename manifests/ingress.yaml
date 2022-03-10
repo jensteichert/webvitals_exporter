@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vitals-exporter-ingress
+  namespace: monitor
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  tls:
+    - hosts:
+        - vitals.{{REPLACE_ME}}.merce.io
+      secretName: prometheus-certificate
+  rules:
+    - host: vitals.{{REPLACE_ME}}.merce.io
+      http:
+        paths:
+          - path: /vitals
+            pathType: Prefix
+            backend:
+              service:
+                name: web-vitals-exporter
+                port:
+                  number: 2113
