@@ -8,17 +8,20 @@ import (
 
 type Label string
 
-const(
-	Custom Label = "custom"
+const (
+	Custom   Label = "custom"
 	WebVital Label = "web-vital"
 )
 
 type WebVitalPayload struct {
-	Id string `json:"id"`
-	Label Label `json:"label"`
-	Name string `json:"name"`
+	Id        string  `json:"id"`
+	Label     Label   `json:"label"`
+	Name      string  `json:"name"`
 	StartTime float64 `json:"startTime"`
-	Value float64 `json:"value"`
+	Value     float64 `json:"value"`
+	App       string  `json:"app"`
+	Url       string  `json:"url"`
+	Build     string  `json:"build"`
 }
 
 func HandleWebVital(write http.ResponseWriter, req *http.Request) {
@@ -56,9 +59,8 @@ func HandleWebVital(write http.ResponseWriter, req *http.Request) {
 		vital = Vitals.CLS
 	}
 
-
 	if vital != nil {
-		vital.WithLabelValues("myapp").Observe(payload.Value)
+		vital.WithLabelValues(payload.App, payload.Url, payload.Build).Observe(payload.Value)
 	}
 
 	write.Write([]byte("ok"))
