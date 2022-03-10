@@ -19,7 +19,7 @@ var Vitals = WebVitals{
 	FCP:  createVital("FCP", "First Contentful Paint"),
 	LCP:  createVital("LCP", "Largest Contentful Paint"),
 	FID:  createVital("FID", "First Input Delay"),
-	CLS:  createVital("ClS", "Cumulative Layout Shift"),
+	CLS:  createVital("CLS", "Cumulative Layout Shift"),
 }
 
 func createVital(name string, help string) *prometheus.SummaryVec {
