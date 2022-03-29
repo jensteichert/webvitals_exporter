@@ -7,7 +7,7 @@ Report Web Vitals from Next.js to Prometheus
 
 
 ## Report Web Vitals
-The exporter exposes a `/vitals` endpoint where results can be reportet.
+The exporter exposes a `/vitals` endpoint where results can be reported.
 
 ### with Next.js
 Export a `reportWebVitals` function from your _app.js/ts
